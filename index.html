@@ -89,64 +89,256 @@
             </nav>
         </header>
 
-        <!-- Hero Section -->
-        <section class="flex flex-col gap-6 fade-in" style="animation-delay: 0.2s;">
-            <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border w-fit">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                <span class="text-xs font-mono text-muted-foreground">System Online</span>
+        <!-- Glamsmorphism Trust Hero Section -->
+        <section class="relative w-full pt-12 pb-12 sm:pt-20 sm:pb-20 lg:pt-32 lg:pb-32">
+
+            <!-- Background Image with Gradient Mask (Absolute) -->
+            <div class="absolute inset-0 z-0 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a72ca2f3-9dd1-4fe4-84ba-fe86468a5237_3840w.webp?w=800&q=80)] bg-cover bg-center opacity-40 ml-[-50vw] mr-[-50vw] w-[200vw]"
+                style="mask-image: linear-gradient(180deg, transparent, black 0%, black 70%, transparent); -webkit-mask-image: linear-gradient(180deg, transparent, black 0%, black 70%, transparent); left: 50%; right: 50%; width: 100vw; margin-left: -50vw;">
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-                Building robust systems.<br>
-                <span class="text-muted-foreground">Masters in Computer Applications.</span>
-            </h1>
+            <div class="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-start">
 
-            <p class="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-                I'm a masters student and builder focused on architecting scalable applications and exploring the depths
-                of computer science.
-            </p>
+                <!-- LEFT COLUMN -->
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-8 pt-8">
 
-            <div class="flex gap-4 pt-2">
-                <a href="#work"
-                    class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 py-2">
-                    View Work
-                </a>
-                <a href="https://github.com" target="_blank"
-                    class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-6 py-2">
-                    <i data-lucide="github" class="w-4 h-4 mr-2"></i> GitHub
-                </a>
-            </div>
-        </section>
+                    <!-- Badge -->
+                    <div class="fade-in" style="animation-delay: 0.1s;">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-md transition-colors hover:bg-white/10">
+                            <span
+                                class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2">
+                                Award-Winning Design
+                                <i data-lucide="star" class="w-3.5 h-3.5 text-yellow-400 fill-yellow-400"></i>
+                            </span>
+                        </div>
+                    </div>
 
-        <!-- About / Terminal Section -->
-        <section id="about" class="fade-in" style="animation-delay: 0.3s;">
-            <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden">
-                <div class="bg-muted/50 px-4 py-3 border-b border-border flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
-                    <div class="ml-2 text-xs font-mono text-muted-foreground">swasthik@dev:~/profile</div>
+                    <!-- Heading -->
+                    <h1 class="fade-in text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tighter leading-[0.9]"
+                        style="animation-delay: 0.2s; mask-image: linear-gradient(180deg, black 0%, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(180deg, black 0%, black 80%, transparent 100%)">
+                        Crafting Digital<br />
+                        <span class="bg-gradient-to-br from-white via-white to-[#ffcd75] bg-clip-text text-transparent">
+                            Experiences
+                        </span><br />
+                        That Matter
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="fade-in max-w-xl text-lg text-zinc-400 leading-relaxed" style="animation-delay: 0.3s;">
+                        We design interfaces that combine beauty with functionality,
+                        creating seamless experiences that users love and businesses thrive on.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="fade-in flex flex-col sm:flex-row gap-4" style="animation-delay: 0.4s;">
+                        <a href="#work"
+                            class="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:scale-[1.02] hover:bg-zinc-200 active:scale-[0.98]">
+                            View Portfolio
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+
+                        <button
+                            class="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-white/20">
+                            <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+                            Watch Showreel
+                        </button>
+                    </div>
                 </div>
-                <div class="p-6 font-mono text-sm space-y-4">
-                    <div class="flex gap-2">
-                        <span class="text-green-500">➜</span>
-                        <span class="text-blue-400">~</span>
-                        <span>neofetch</span>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4">
-                        <div class="hidden md:flex items-center justify-center text-primary/20">
-                            <i data-lucide="terminal" class="w-16 h-16"></i>
+
+                <!-- RIGHT COLUMN -->
+                <div class="lg:col-span-5 space-y-6 lg:mt-12">
+
+                    <!-- Stats Card -->
+                    <div class="fade-in relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-2xl"
+                        style="animation-delay: 0.5s;">
+                        <!-- Card Glow Effect -->
+                        <div
+                            class="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-white/5 blur-3xl pointer-events-none">
                         </div>
-                        <div class="space-y-1 text-muted-foreground">
-                            <p><span class="text-primary font-bold">User:</span> Swasthik S</p>
-                            <p><span class="text-primary font-bold">Education:</span> Masters in Computer Applications
-                            </p>
-                            <p><span class="text-primary font-bold">Focus:</span> Full Stack Development, Systems</p>
-                            <p><span class="text-primary font-bold">Stack:</span> React, Next.js, Node.js, Python</p>
-                            <p><span class="text-primary font-bold">Status:</span> Open for opportunities</p>
+
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-4 mb-8">
+                                <div
+                                    class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
+                                    <i data-lucide="target" class="h-6 w-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold tracking-tight text-white">150+</div>
+                                    <div class="text-sm text-zinc-400">Projects Delivered</div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar Section -->
+                            <div class="space-y-3 mb-8">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-zinc-400">Client Satisfaction</span>
+                                    <span class="text-white font-medium">98%</span>
+                                </div>
+                                <div class="h-2 w-full overflow-hidden rounded-full bg-zinc-800/50">
+                                    <div class="h-full w-[98%] rounded-full bg-gradient-to-r from-white to-zinc-400">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h-px w-full bg-white/10 mb-6"></div>
+
+                            <!-- Mini Stats Grid -->
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div
+                                    class="flex flex-col items-center justify-center transition-transform hover:-translate-y-1 cursor-default">
+                                    <span class="text-xl font-bold text-white sm:text-2xl">5+</span>
+                                    <span
+                                        class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium sm:text-xs">Years</span>
+                                </div>
+                                <div class="w-px h-full bg-white/10 mx-auto"></div>
+                                <div
+                                    class="flex flex-col items-center justify-center transition-transform hover:-translate-y-1 cursor-default">
+                                    <span class="text-xl font-bold text-white sm:text-2xl">24/7</span>
+                                    <span
+                                        class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium sm:text-xs">Support</span>
+                                </div>
+                                <div class="w-px h-full bg-white/10 mx-auto"></div>
+                                <div
+                                    class="flex flex-col items-center justify-center transition-transform hover:-translate-y-1 cursor-default">
+                                    <span class="text-xl font-bold text-white sm:text-2xl">100%</span>
+                                    <span
+                                        class="text-[10px] uppercase tracking-wider text-zinc-500 font-medium sm:text-xs">Quality</span>
+                                </div>
+                            </div>
+
+                            <!-- Tag Pills -->
+                            <div class="mt-8 flex flex-wrap gap-2">
+                                <div
+                                    class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300">
+                                    <span class="relative flex h-2 w-2">
+                                        <span
+                                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                    </span>
+                                    ACTIVE
+                                </div>
+                                <div
+                                    class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300">
+                                    <i data-lucide="crown" class="w-3 h-3 text-yellow-500"></i>
+                                    PREMIUM
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Marquee Card -->
+                    <div class="fade-in relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 py-8 backdrop-blur-xl"
+                        style="animation-delay: 0.5s;">
+                        <h3 class="mb-6 px-8 text-sm font-medium text-zinc-400">Trusted by Industry Leaders</h3>
+
+                        <div class="relative flex overflow-hidden"
+                            style="mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);">
+
+                            <div class="animate-marquee flex gap-12 whitespace-nowrap px-4">
+                                <!-- Replicated Mock Clients (3 sets for looping) -->
+
+                                <!-- Set 1 -->
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="hexagon" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Acme Corp</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="triangle" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Quantum</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="command" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Command+Z</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="ghost" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Phantom</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="gem" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Ruby</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="cpu" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Chipset</span>
+                                </div>
+
+                                <!-- Set 2 -->
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="hexagon" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Acme Corp</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="triangle" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Quantum</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="command" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Command+Z</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="ghost" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Phantom</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="gem" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Ruby</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="cpu" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Chipset</span>
+                                </div>
+
+                                <!-- Set 3 -->
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="hexagon" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Acme Corp</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="triangle" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Quantum</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="command" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Command+Z</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="ghost" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Phantom</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="gem" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Ruby</span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 opacity-50 hover:opacity-100 hover:scale-105 transition-all cursor-default grayscale hover:grayscale-0">
+                                    <i data-lucide="cpu" class="h-6 w-6 text-white fill-current"></i>
+                                    <span class="text-lg font-bold text-white tracking-tight">Chipset</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

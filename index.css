@@ -46,6 +46,21 @@ body {
     }
 }
 
+/* Marquee Animation */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 40s linear infinite;
+}
+
 /* Grid background pattern */
 .bg-grid {
     background-size: 40px 40px;
