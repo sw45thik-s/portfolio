@@ -1,16 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Swasthik S | MCA</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (via CDN for static usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-</html>
+<body
+    class="bg-background text-foreground font-sans min-h-screen antialiased selection:bg-primary selection:text-primary-foreground">
 
-<body>
+    <!-- Grid Background -->
+    <div class="fixed inset-0 z-0 bg-grid pointer-events-none fade-in"></div>
+    <div class="fixed inset-0 z-0 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
 
+    <!-- Main Container -->
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 md:py-20 flex flex-col gap-24">
+
+        <!-- Header / Nav -->
+        <header class="flex justify-between items-center fade-in" style="animation-delay: 0.1s;">
+            <div class="font-bold text-xl tracking-tight">SWASTHIK S</div>
+            <nav class="flex gap-6 text-sm text-muted-foreground">
+                <a href="#work" class="hover:text-foreground transition-colors">Work</a>
+                <a href="#about" class="hover:text-foreground transition-colors">About</a>
+                <a href="#contact" class="hover:text-foreground transition-colors">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="flex flex-col gap-6 fade-in" style="animation-delay: 0.2s;">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border w-fit">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-xs font-mono text-muted-foreground">System Online</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                Building robust systems.<br>
+                <span class="text-muted-foreground">Masters in Computer Applications.</span>
+            </h1>
+
+            <p class="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                I'm a masters student and builder focused on architecting scalable applications and exploring the depths
+                of computer science.
+            </p>
+
+            <div class="flex gap-4 pt-2">
+                <a href="#work"
+                    class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 py-2">
+                    View Work
+                </a>
+                <a href="https://github.com" target="_blank"
+                    class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-6 py-2">
+                    <i data-lucide="github" class="w-4 h-4 mr-2"></i> GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- About / Terminal Section -->
+        <section id="about" class="fade-in" style="animation-delay: 0.3s;">
+            <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden">
+                <div class="bg-muted/50 px-4 py-3 border-b border-border flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                    <div class="ml-2 text-xs font-mono text-muted-foreground">swasthik@dev:~/profile</div>
+                </div>
+                <div class="p-6 font-mono text-sm space-y-4">
+                    <div class="flex gap-2">
+                        <span class="text-green-500">➜</span>
+                        <span class="text-blue-400">~</span>
+                        <span>neofetch</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4">
+                        <div class="hidden md:flex items-center justify-center text-primary/20">
+                            <i data-lucide="terminal" class="w-16 h-16"></i>
+                        </div>
+                        <div class="space-y-1 text-muted-foreground">
+                            <p><span class="text-primary font-bold">User:</span> Swasthik S</p>
+                            <p><span class="text-primary font-bold">Education:</span> Masters in Computer Applications
+                            </p>
+                            <p><span class="text-primary font-bold">Focus:</span> Full Stack Development, Systems</p>
+                            <p><span class="text-primary font-bold">Stack:</span> React, Next.js, Node.js, Python</p>
+                            <p><span class="text-primary font-bold">Status:</span> Open for opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="space-y-8 fade-in" style="animation-delay: 0.4s;">
+            <div class="space-y-2">
+                <h2 class="text-2xl font-bold tracking-tight">Selected Works</h2>
+                <p class="text-muted-foreground">Projects that solve real problems.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div
+                    class="group rounded-xl border border-border bg-card text-card-foreground shadow-sm hover:border-primary/50 transition-all duration-300">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-2 bg-primary/10 rounded-md text-primary">
+                                <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                            </div>
+                            <div class="flex gap-2">
+                                <span
+                                    class="bg-secondary text-secondary-foreground text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-semibold">Web
+                                    App</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-bold text-lg group-hover:text-primary transition-colors">Portfolio V1</h3>
+                            <p class="text-sm text-muted-foreground">
+                                A modern portfolio website built with clean architecture and brutalist design
+                                principles.
+                            </p>
+                        </div>
+                        <div class="flex gap-2 pt-2">
+                            <span
+                                class="text-xs border border-border px-2 py-1 rounded-md text-muted-foreground font-mono">React</span>
+                            <span
+                                class="text-xs border border-border px-2 py-1 rounded-md text-muted-foreground font-mono">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="group rounded-xl border border-border bg-card text-card-foreground shadow-sm hover:border-primary/50 transition-all duration-300">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-2 bg-primary/10 rounded-md text-primary">
+                                <i data-lucide="database" class="w-6 h-6"></i>
+                            </div>
+                            <div class="flex gap-2">
+                                <span
+                                    class="bg-secondary text-secondary-foreground text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-semibold">Backend</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-bold text-lg group-hover:text-primary transition-colors">System API</h3>
+                            <p class="text-sm text-muted-foreground">
+                                Robust backend services handling high concurrency and data integrity.
+                            </p>
+                        </div>
+                        <div class="flex gap-2 pt-2">
+                            <span
+                                class="text-xs border border-border px-2 py-1 rounded-md text-muted-foreground font-mono">Node.js</span>
+                            <span
+                                class="text-xs border border-border px-2 py-1 rounded-md text-muted-foreground font-mono">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills / Marquee inspired -->
+        <section class="fade-in" style="animation-delay: 0.5s;">
+            <div class="rounded-lg bg-secondary/30 border border-border p-8 text-center space-y-6">
+                <h3 class="text-lg font-medium">Tools & Technologies</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">JavaScript</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">TypeScript</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">React</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">Next.js</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">Node.js</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">Python</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">PostgreSQL</span>
+                    <span
+                        class="px-3 py-1 bg-background border border-border rounded-full text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default">Docker</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="border-t border-border pt-12 pb-8 fade-in" style="animation-delay: 0.6s;">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="space-y-2">
+                    <h4 class="text-lg font-bold">Ready to build?</h4>
+                    <p class="text-muted-foreground text-sm">Let's create something meaningful together.</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="mailto:swasthik@example.com"
+                        class="text-muted-foreground hover:text-primary transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-xs text-muted-foreground text-center md:text-left">
+                © 2026 Swasthik S. All rights reserved.
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
